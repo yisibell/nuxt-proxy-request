@@ -6,8 +6,10 @@ import { hash, objectHash } from 'ohash'
 
 type CreateProxyEventHandlerOptions = Parameters<typeof createProxyEventHandler>[0]
 
+type ProxyOptions = CreateProxyEventHandlerOptions[] | CreateProxyEventHandlerOptions
+
 export interface ModuleOptions {
-  options: CreateProxyEventHandlerOptions[] | CreateProxyEventHandlerOptions
+  options: ProxyOptions
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -29,7 +31,7 @@ export default defineNuxtModule<ModuleOptions>({
       options: options.options,
     })
 
-    nuxt.options.runtimeConfig.proxy = finalConfig
+    nuxt.options.runtimeConfig.proxy != finalConfig
 
     function createProxyMiddleware(options: CreateProxyEventHandlerOptions, index?: number) {
       return `
