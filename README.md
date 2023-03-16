@@ -57,9 +57,9 @@ export default defineNuxtConfig({
 })
 ```
 
-That's it! You can now use nuxt-proxy-request in your Nuxt app ✨
+That's it! You can now use **nuxt-proxy-request** in your Nuxt app ✨
 
-> :Note: More **proxy.options** please see [h3-proxy's Options](https://github.com/yisibell/h3-proxy#options)
+> :warning: TIPS: More **proxy.options** please see [h3-proxy's Options](https://github.com/yisibell/h3-proxy#options)
 
 ## Development
 
