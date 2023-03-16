@@ -25,7 +25,8 @@
     "h3",
     "nitro",
     "h3-proxy",
-    "nuxt-module"
+    "nuxt-module",
+    "proxyRequest"
   ],
   "homepage": "https://github.com/yisibell/nuxt-proxy-request",
   "scripts": {
