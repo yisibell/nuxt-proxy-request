@@ -1,8 +1,10 @@
 import { fileURLToPath } from 'node:url'
 import { defu } from 'defu'
 import { addServerHandler, createResolver, defineNuxtModule } from '@nuxt/kit'
-import type { CreateProxyEventHandlerOptions } from 'h3-proxy'
+import { createProxyEventHandler } from 'h3-proxy'
 import { hash, objectHash } from 'ohash'
+
+type CreateProxyEventHandlerOptions = Parameters<typeof createProxyEventHandler>[0]
 
 export interface ModuleOptions {
   options: CreateProxyEventHandlerOptions[] | CreateProxyEventHandlerOptions

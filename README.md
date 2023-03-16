@@ -42,11 +42,24 @@ npm install --save-dev nuxt-proxy-request
 export default defineNuxtConfig({
   modules: [
     'nuxt-proxy-request'
-  ]
+  ],
+  proxy: {
+    options: [
+      {
+        target: 'http://www.example.com',
+        pathFilter: ['/api/**'],
+        pathRewrite: {
+          '/api': ''
+        }
+      }
+    ]
+  }
 })
 ```
 
 That's it! You can now use nuxt-proxy-request in your Nuxt app ✨
+
+> :Note: More **proxy.options** please see [h3-proxy's Options](https://github.com/yisibell/h3-proxy#options)
 
 ## Development
 
