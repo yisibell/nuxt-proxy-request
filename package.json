@@ -1,0 +1,59 @@
+{
+  "name": "nuxt-proxy-request",
+  "version": "1.0.0",
+  "description": "A http proxy module for nuxt(3) powered by h3-proxy.",
+  "repository": "yisibell/nuxt-proxy-request",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "http-proxy",
+    "h3",
+    "nitro",
+    "h3-proxy",
+    "nuxt-module"
+  ],
+  "homepage": "https://github.com/yisibell/nuxt-proxy-request",
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "release:lint:test": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.2.3",
+    "defu": "^6.1.2",
+    "h3-proxy": "^1.1.4",
+    "ohash": "^1.0.0"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxt/module-builder": "^0.2.1",
+    "@nuxt/schema": "^3.2.3",
+    "@nuxt/test-utils": "^3.2.3",
+    "changelogen": "^0.5.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.36.0",
+    "nuxt": "^3.2.3",
+    "vitest": "^0.29.2"
+  }
+}
