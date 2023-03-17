@@ -18,7 +18,7 @@ A http proxy module for nuxt(3) powered by <a href="https://github.com/yisibell/
 
 ## Features
 
-- Almost the same API as  [nuxt-proxy](https://github.com/wobsoriano/nuxt-proxy), But this module using <a href="https://github.com/yisibell/h3-proxy"> h3-proxy </a>.
+- Almost the same API as  [nuxt-proxy](https://github.com/wobsoriano/nuxt-proxy) that using [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware), But this module using <a href="https://github.com/yisibell/h3-proxy"> h3-proxy </a>.
 - Support **Typescript**.
 
 ## Quick Setup
@@ -54,12 +54,21 @@ export default defineNuxtConfig({
       }
     ]
   }
+  // OR
+  // runtimeConfig: {
+  //   proxy: {...}
+  // }
 })
 ```
 
 That's it! You can now use **nuxt-proxy-request** in your Nuxt app ✨
 
-> :warning: TIPS: More **proxy.options** please see [h3-proxy's Options](https://github.com/yisibell/h3-proxy#options)
+
+## Options
+
+| key | Type | Default value | Description |
+| :---: | :---: | :---: | :---: |
+| `options` | `object/Array<object>` | `[]` | Configure which targets you want to proxy. :warning: TIPS: More **config object** please see [h3-proxy's Options](https://github.com/yisibell/h3-proxy#options)|
 
 ## Development
 
