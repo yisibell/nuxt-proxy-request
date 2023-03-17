@@ -49,7 +49,7 @@ export default defineNuxtConfig({
         target: 'http://www.example.com',
         pathFilter: ['/api/**'],
         pathRewrite: {
-          '/api': ''
+          '^/api': ''
         }
       }
     ]
