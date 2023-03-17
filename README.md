@@ -66,9 +66,9 @@ That's it! You can now use **nuxt-proxy-request** in your Nuxt app ✨
 
 ## Options
 
-| key | Type | Default value | Description |
+| Key | Type | Default value | Description |
 | :---: | :---: | :---: | :---: |
-| `options` | `object/Array<object>` | `[]` | Configure which targets you want to proxy. :warning: TIPS: More **config object** please see [h3-proxy's Options](https://github.com/yisibell/h3-proxy#options)|
+| `options` | `object/Array<object>` | `[]` | Configure which targets you want to proxy. :warning: TIPS: More **config object** please see [h3-proxy's Options](https://github.com/yisibell/h3-proxy#options), You can pass an **array of options** for multiple targets or pass an **object of options** for single target.|
 
 ## Development
 
