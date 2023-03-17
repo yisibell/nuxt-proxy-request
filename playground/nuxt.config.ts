@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     options: [
       {
         target: 'http://16.163.143.182',
-        pathRewrite: { '/api2': '' },
+        pathRewrite: { '^/api2': '' },
         pathFilter: ['/api2/**'],
       },
     ],

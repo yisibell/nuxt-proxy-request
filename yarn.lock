@@ -3425,10 +3425,10 @@ gzip-size@^7.0.0:
   dependencies:
     duplexer "^0.1.2"
 
-h3-proxy@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/h3-proxy/-/h3-proxy-1.4.0.tgz#667f51ef7411b9c4ec1de8fcf67868c65d629455"
-  integrity sha512-+EEABXzncMhx0oKRgMAAqZ/pbnJC/i3dkypwuhJaHXdvZT6tFoimFKeodybHE75a6SdWYb+PRUHBGoYfxla3/Q==
+h3-proxy@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/h3-proxy/-/h3-proxy-1.5.0.tgz#b0f5d947c12a9e8dcaf55a36a2139e16cb482bd3"
+  integrity sha512-d8s09f12k16Z47uHvf1djbkQZuy7+FOS1cVRpJNtO5srsJYDjELYewLVhh81gQYoJUFyTe1fNdLA8goklWYBeg==
   dependencies:
     consola "^2.15.3"
     is-glob "^4.0.3"
