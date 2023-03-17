@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.0
+
+[compare changes](https://undefined/undefined/compare/v1.0.2...v1.1.0)
+
+
+### 🚀 Enhancements
+
+  - **deps:** Update non-major deps (2f1be70)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.0.2
 
 [compare changes](https://undefined/undefined/compare/v1.0.1...v1.0.2)
