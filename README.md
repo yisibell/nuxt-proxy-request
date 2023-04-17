@@ -16,8 +16,13 @@ A http proxy module for nuxt(3) powered by <a href="https://github.com/yisibell/
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 
+# Why this module?
+
+- See this issue [Error when starting a Project using "http-proxy-middleware" with "npm run start" #15608](https://github.com/nuxt/nuxt/issues/15608)
+
 ## Features
 
+- Support for both **development** and **production** environments.
 - Almost the same API as  [nuxt-proxy](https://github.com/wobsoriano/nuxt-proxy) that using [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware), But this module using <a href="https://github.com/yisibell/h3-proxy"> h3-proxy </a>.
 - Support **Typescript**.
 
