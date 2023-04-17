@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.8
+
+[compare changes](https://undefined/undefined/compare/v1.1.7...v1.1.8)
+
+
+### 🏡 Chore
+
+  - **docs:** Update readme (b84a512)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.1.7
 
 [compare changes](https://undefined/undefined/compare/v1.1.6...v1.1.7)
