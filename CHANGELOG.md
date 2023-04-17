@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.7
+
+[compare changes](https://undefined/undefined/compare/v1.1.6...v1.1.7)
+
+
+### 🏡 Chore
+
+  - **docs:** Update why this module (4010d80)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.1.6
 
 [compare changes](https://undefined/undefined/compare/v1.1.5...v1.1.6)
