@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.10
+
+[compare changes](https://undefined/undefined/compare/v1.1.9...v1.1.10)
+
+
+### 🩹 Fixes
+
+  - Runtime proxy type (bad0647)
+
+### ❤️  Contributors
+
+- Elenh ([@yisibell](http://github.com/yisibell))
+
 ## v1.1.9
 
 [compare changes](https://undefined/undefined/compare/v1.1.8...v1.1.9)
