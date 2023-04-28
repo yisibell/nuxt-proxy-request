@@ -10,6 +10,12 @@ export interface ModuleOptions {
   options: ProxyOptions
 }
 
+declare module 'nuxt/schema' {
+  interface RuntimeConfig {
+    proxy: ModuleOptions
+  }
+}
+
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-proxy-request',
@@ -28,8 +34,8 @@ export default defineNuxtModule<ModuleOptions>({
     const finalConfig = defu<ModuleOptions, ModuleOptions[]>(nuxt.options.runtimeConfig.proxy, {
       options: options.options,
     })
-
-    nuxt.options.runtimeConfig.proxy != finalConfig
+    
+    nuxt.options.runtimeConfig.proxy = finalConfig
 
     function createProxyMiddleware(options: CreateProxyEventHandlerOptions, index?: number) {
       return `
