@@ -25,15 +25,13 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     options: [],
   },
-  setup(options, nuxt) {
+  setup(inlineOptions, nuxt) {
     const { resolve } = createResolver(import.meta.url)
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
 
     nuxt.options.build.transpile.push(runtimeDir, /#http-proxy-request/)
 
-    const finalConfig = defu<ModuleOptions, ModuleOptions[]>(nuxt.options.runtimeConfig.proxy, {
-      options: options.options,
-    })
+    const finalConfig = defu(nuxt.options.runtimeConfig.proxy, inlineOptions)
     
     nuxt.options.runtimeConfig.proxy = finalConfig
 
