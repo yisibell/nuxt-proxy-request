@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.2.0
+
+[compare changes](https://undefined/undefined/compare/v1.1.9...v1.2.0)
+
+
+### 🚀 Enhancements
+
+  - Update nuxt to 3.6, add prettier for code format, fix runtime proxy type (94c2a8e)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.1.9
 
 [compare changes](https://undefined/undefined/compare/v1.1.8...v1.1.9)
