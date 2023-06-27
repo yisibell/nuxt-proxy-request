@@ -13,6 +13,31 @@
 ### ❤️  Contributors
 
 - Wenqing <wenqing@kerrylan.com>
+## v1.1.11
+
+[compare changes](https://undefined/undefined/compare/v1.1.10...v1.1.11)
+
+
+### 🏡 Chore
+
+  - Update module options merge style (7ae35c1)
+
+### ❤️  Contributors
+
+- Elenh ([@yisibell](http://github.com/yisibell))
+
+## v1.1.10
+
+[compare changes](https://undefined/undefined/compare/v1.1.9...v1.1.10)
+
+
+### 🩹 Fixes
+
+  - Runtime proxy type (bad0647)
+
+### ❤️  Contributors
+
+- Elenh ([@yisibell](http://github.com/yisibell))
 
 ## v1.1.9
 
