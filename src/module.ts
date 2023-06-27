@@ -4,10 +4,18 @@ import { addServerHandler, createResolver, defineNuxtModule } from '@nuxt/kit'
 import type { CreateProxyEventHandlerOptions } from 'h3-proxy'
 import { hash, objectHash } from 'ohash'
 
-export type ProxyOptions = CreateProxyEventHandlerOptions[] | CreateProxyEventHandlerOptions
+export type ProxyOptions =
+  | CreateProxyEventHandlerOptions[]
+  | CreateProxyEventHandlerOptions
 
 export interface ModuleOptions {
   options: ProxyOptions
+}
+
+declare module 'nuxt/schema' {
+  interface RuntimeConfig {
+    proxy?: ModuleOptions
+  }
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -25,20 +33,30 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.options.build.transpile.push(runtimeDir, /#http-proxy-request/)
 
-    const finalConfig = defu<ModuleOptions, ModuleOptions[]>(nuxt.options.runtimeConfig.proxy, {
-      options: options.options,
-    })
+    const finalConfig = defu<ModuleOptions, ModuleOptions[]>(
+      nuxt.options.runtimeConfig.proxy,
+      {
+        options: options.options,
+      }
+    )
 
     nuxt.options.runtimeConfig.proxy != finalConfig
 
-    function createProxyMiddleware(options: CreateProxyEventHandlerOptions, index?: number) {
+    function createProxyMiddleware(
+      options: CreateProxyEventHandlerOptions,
+      index?: number
+    ) {
       return `
-        import { createProxyMiddleware } from ${JSON.stringify(resolve(runtimeDir, './middleware.mjs'))}
+        import { createProxyMiddleware } from ${JSON.stringify(
+          resolve(runtimeDir, './middleware.mjs')
+        )}
         import { defu } from 'defu'
         import { useRuntimeConfig } from '#imports'
     
         const buildtimeOptions = ${JSON.stringify(options)}
-        const runtimeOptions = [].concat(useRuntimeConfig().proxy?.options)[${JSON.stringify(index)} ?? 0]
+        const runtimeOptions = [].concat(useRuntimeConfig().proxy?.options)[${JSON.stringify(
+          index
+        )} ?? 0]
     
         export default createProxyMiddleware(defu(runtimeOptions, buildtimeOptions))
       `
@@ -48,21 +66,30 @@ export default defineNuxtModule<ModuleOptions>({
       nitroConfig.virtual = nitroConfig.virtual || {}
 
       if (Array.isArray(finalConfig.options)) {
-        (finalConfig.options as CreateProxyEventHandlerOptions[]).forEach((options, index) => {
-          const handler = `#http-proxy-request/${hash(objectHash(options))}.mjs`
-          nitroConfig.virtual![handler] = createProxyMiddleware(options, index)
+        ;(finalConfig.options as CreateProxyEventHandlerOptions[]).forEach(
+          (options, index) => {
+            const handler = `#http-proxy-request/${hash(
+              objectHash(options)
+            )}.mjs`
+            nitroConfig.virtual![handler] = createProxyMiddleware(
+              options,
+              index
+            )
 
-          addServerHandler({
-            handler,
-            middleware: true,
-          })
-        })
-        
+            addServerHandler({
+              handler,
+              middleware: true,
+            })
+          }
+        )
       } else {
+        const handler = `#http-proxy-request/${hash(
+          objectHash(finalConfig.options)
+        )}.mjs`
 
-        const handler = `#http-proxy-request/${hash(objectHash(finalConfig.options))}.mjs`
-
-        nitroConfig.virtual[handler] = createProxyMiddleware(finalConfig.options)
+        nitroConfig.virtual[handler] = createProxyMiddleware(
+          finalConfig.options
+        )
 
         addServerHandler({
           handler,

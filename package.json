@@ -41,20 +41,23 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.2.3",
+    "@nuxt/kit": "^3.6.1",
     "defu": "^6.1.2",
-    "h3-proxy": "^1.7.1",
+    "h3-proxy": "^1.8.0",
     "ohash": "^1.0.0"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxt/module-builder": "^0.2.1",
-    "@nuxt/schema": "^3.2.3",
-    "@nuxt/test-utils": "^3.2.3",
+    "@nuxt/schema": "^3.6.1",
+    "@nuxt/test-utils": "^3.6.1",
     "changelogen": "^0.5.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.36.0",
-    "nuxt": "^3.2.3",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nuxt": "^3.6.1",
+    "prettier": "^2.8.8",
     "vitest": "^0.29.2"
   }
 }
