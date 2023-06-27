@@ -14,7 +14,7 @@ export interface ModuleOptions {
 
 declare module 'nuxt/schema' {
   interface RuntimeConfig {
-    proxy?: ModuleOptions
+    proxy: ModuleOptions
   }
 }
 
