@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.4.0
+
+[compare changes](https://undefined/undefined/compare/v1.3.0...v1.4.0)
+
+### 🚀 Enhancements
+
+- Upgrade all non-major deps (1a5f04a)
+
+### 🏡 Chore
+
+- Sync repo (8494b9f)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.3.0
 
 [compare changes](https://undefined/undefined/compare/v1.1.11...v1.3.0)
