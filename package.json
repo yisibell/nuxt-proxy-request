@@ -5,6 +5,9 @@
   "repository": "yisibell/nuxt-proxy-request",
   "license": "MIT",
   "type": "module",
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.mjs",
+  "types": "./dist/types.d.ts",
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
@@ -12,8 +15,6 @@
       "require": "./dist/module.cjs"
     }
   },
-  "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
   "files": [
     "dist",
     "*.d.ts"
@@ -41,23 +42,23 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.6.1",
+    "@nuxt/kit": "^3.6.5",
     "defu": "^6.1.2",
-    "h3-proxy": "^1.8.0",
-    "ohash": "^1.0.0"
+    "h3-proxy": "^1.9.0",
+    "ohash": "^1.1.2"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxt/module-builder": "^0.2.1",
-    "@nuxt/schema": "^3.6.1",
-    "@nuxt/test-utils": "^3.6.1",
-    "changelogen": "^0.5.1",
+    "@nuxt/schema": "^3.6.5",
+    "@nuxt/test-utils": "^3.6.5",
+    "changelogen": "^0.5.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.36.0",
-    "eslint-config-prettier": "^8.8.0",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "nuxt": "^3.6.1",
+    "nuxt": "^3.6.5",
     "prettier": "^2.8.8",
-    "vitest": "^0.29.2"
+    "vitest": "^0.29.8"
   }
 }
