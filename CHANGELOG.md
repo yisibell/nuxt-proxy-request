@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.5.0
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.4.0...v1.5.0)
+
+### 🚀 Enhancements
+
+- Support nuxt v3.7 ([8f7c59b](https://github.com/yisibell/nuxt-proxy-request/commit/8f7c59b))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.4.0
 
 [compare changes](https://undefined/undefined/compare/v1.3.0...v1.4.0)
