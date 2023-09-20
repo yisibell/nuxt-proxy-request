@@ -20,6 +20,22 @@ declare module 'nuxt/schema' {
 
 export const virtualModulePrefix = '#nuxt-proxy-request'
 
+export const stringifyOptions = (value: any) => {
+  const res = JSON.stringify(value, (key, value) => {
+    if (typeof value === 'function') {
+      return `/Function(${value})/`
+    }
+
+    return value
+  })
+
+  const saftyRes = res
+    .replace(/"\/Function\((.*)\)\/"/g, '$1')
+    .replace(/\\n/g, '')
+
+  return saftyRes
+}
+
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-proxy-request',
@@ -54,7 +70,8 @@ export default defineNuxtModule<ModuleOptions>({
         import { defu } from 'defu'
         import { useRuntimeConfig } from '#imports'
     
-        const buildtimeOptions = ${JSON.stringify(options)}
+        const buildtimeOptions = ${stringifyOptions(options)}
+
         const runtimeOptions = [].concat(useRuntimeConfig().proxy?.options)[${JSON.stringify(
           index
         )} ?? 0]
