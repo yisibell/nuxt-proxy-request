@@ -18,6 +18,8 @@ declare module 'nuxt/schema' {
   }
 }
 
+export const virtualModulePrefix = '#nuxt-proxy-request'
+
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-proxy-request',
@@ -31,13 +33,17 @@ export default defineNuxtModule<ModuleOptions>({
     const { resolve } = createResolver(import.meta.url)
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
 
-    nuxt.options.build.transpile.push(runtimeDir, /#http-proxy-request/)
+    nuxt.options.build.transpile.push(
+      runtimeDir,
+      new RegExp(`${virtualModulePrefix}`)
+    )
 
     const finalConfig = defu(nuxt.options.runtimeConfig.proxy, inlineOptions)
 
     nuxt.options.runtimeConfig.proxy = finalConfig
 
-    function createProxyMiddleware(
+    // Create a virtual module
+    function createProxyServerHandlerVirtualModule(
       options: CreateProxyEventHandlerOptions,
       index?: number
     ) {
@@ -60,37 +66,26 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.hook('nitro:config', (nitroConfig) => {
       nitroConfig.virtual = nitroConfig.virtual || {}
 
-      if (Array.isArray(finalConfig.options)) {
-        ;(finalConfig.options as CreateProxyEventHandlerOptions[]).forEach(
-          (options, index) => {
-            const handler = `#http-proxy-request/${hash(
-              objectHash(options)
-            )}.mjs`
-            nitroConfig.virtual![handler] = createProxyMiddleware(
-              options,
-              index
-            )
+      // To array
+      const finalConfigOptions = Array.isArray(finalConfig.options)
+        ? finalConfig.options
+        : [finalConfig.options]
 
-            addServerHandler({
-              handler,
-              middleware: true,
-            })
-          }
-        )
-      } else {
-        const handler = `#http-proxy-request/${hash(
-          objectHash(finalConfig.options)
+      finalConfigOptions.forEach((options, index) => {
+        const handler = `${virtualModulePrefix}/${hash(
+          objectHash(options)
         )}.mjs`
 
-        nitroConfig.virtual[handler] = createProxyMiddleware(
-          finalConfig.options
+        nitroConfig.virtual![handler] = createProxyServerHandlerVirtualModule(
+          options,
+          index
         )
 
         addServerHandler({
           handler,
           middleware: true,
         })
-      }
+      })
     })
   },
 })

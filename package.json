@@ -23,6 +23,7 @@
     "nuxt",
     "nuxt3",
     "http-proxy",
+    "http-proxy-middleware",
     "h3",
     "nitro",
     "h3-proxy",
