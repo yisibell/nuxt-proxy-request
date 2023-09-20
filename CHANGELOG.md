@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.6.0
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.5.1...v1.6.0)
+
+### 🚀 Enhancements
+
+- Support `function` type options value ([e4c0364](https://github.com/yisibell/nuxt-proxy-request/commit/e4c0364))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.5.1
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.5.0...v1.5.1)
