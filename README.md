@@ -71,7 +71,7 @@ That's it! You can now use **nuxt-proxy-request** in your Nuxt app ✨
 
 ## Notes :warning:
 
-1. Do not use `runtimeConfig.proxy` for configuration when the value of a certain configuration item is a function type, as the function type value in the `runtimeConfig` object will be ignored.
+1. Do not use `runtimeConfig.proxy` for configuration when the value of a certain configuration item is a function type, as the function type value in the `runtimeConfig` object will be ignored. Please use `proxy` for configuration as it has undergone special processing on the internal implementation.
 
 ## Options
 
