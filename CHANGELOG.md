@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.6.1
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.6.0...v1.6.1)
+
+### 🏡 Chore
+
+- Update readme ([c404321](https://github.com/yisibell/nuxt-proxy-request/commit/c404321))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.6.0
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.5.1...v1.6.0)
