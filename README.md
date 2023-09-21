@@ -69,6 +69,10 @@ export default defineNuxtConfig({
 That's it! You can now use **nuxt-proxy-request** in your Nuxt app ✨
 
 
+## Notes :warning:
+
+1. Do not use `runtimeConfig.proxy` for configuration when the value of a certain configuration item is a function type, as the function type value in the `runtimeConfig` object will be ignored.
+
 ## Options
 
 | Key | Type | Default value | Description |

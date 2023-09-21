@@ -40,7 +40,9 @@ export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-proxy-request',
     configKey: 'proxy',
-    version: '^3.1.0',
+    compatibility: {
+      nuxt: '^3.1.0',
+    },
   },
   defaults: {
     options: [],
@@ -60,7 +62,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Create a virtual module
     function createProxyServerHandlerVirtualModule(
-      options: CreateProxyEventHandlerOptions,
+      opts: CreateProxyEventHandlerOptions,
       index?: number
     ) {
       return `
@@ -70,7 +72,7 @@ export default defineNuxtModule<ModuleOptions>({
         import { defu } from 'defu'
         import { useRuntimeConfig } from '#imports'
     
-        const buildtimeOptions = ${stringifyOptions(options)}
+        const buildtimeOptions = ${stringifyOptions(opts)}
 
         const runtimeOptions = [].concat(useRuntimeConfig().proxy?.options)[${JSON.stringify(
           index
@@ -88,13 +90,11 @@ export default defineNuxtModule<ModuleOptions>({
         ? finalConfig.options
         : [finalConfig.options]
 
-      finalConfigOptions.forEach((options, index) => {
-        const handler = `${virtualModulePrefix}/${hash(
-          objectHash(options)
-        )}.mjs`
+      finalConfigOptions.forEach((opts, index) => {
+        const handler = `${virtualModulePrefix}/${hash(objectHash(opts))}.mjs`
 
         nitroConfig.virtual![handler] = createProxyServerHandlerVirtualModule(
-          options,
+          opts,
           index
         )
 
