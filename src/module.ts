@@ -23,14 +23,15 @@ export const virtualModulePrefix = '#nuxt-proxy-request'
 export const stringifyOptions = (value: any) => {
   const res = JSON.stringify(value, (key, value) => {
     if (typeof value === 'function') {
-      return `/Function(${value})/`
+      return `<Function>${value}</Function>`
     }
 
     return value
   })
 
   const saftyRes = res
-    .replace(/"\/Function\((.*)\)\/"/g, '$1')
+    .replace(/"<Function>/g, '')
+    .replace(/<\/Function>"/g, '')
     .replace(/\\n/g, '')
 
   return saftyRes

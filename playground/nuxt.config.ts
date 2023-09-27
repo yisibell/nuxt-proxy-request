@@ -11,6 +11,14 @@ export default defineNuxtConfig({
           const re = new RegExp(`^/api2.*`)
           return re.test(path)
         },
+        configureProxyRequest: function (event) {
+          console.log(event.node.req.headers)
+          return {
+            headers: {
+              token: 'set some token value',
+            },
+          }
+        },
       },
     ],
   },
