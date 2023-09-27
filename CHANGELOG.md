@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.7.0
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.6.1...v1.7.0)
+
+### 🚀 Enhancements
+
+- Fix multiple function type option ([1cd31c1](https://github.com/yisibell/nuxt-proxy-request/commit/1cd31c1))
+
+### 🏡 Chore
+
+- **docs:** Update readme ([d262b03](https://github.com/yisibell/nuxt-proxy-request/commit/d262b03))
+- **docs:** Update notes ([ca068d7](https://github.com/yisibell/nuxt-proxy-request/commit/ca068d7))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.6.1
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.6.0...v1.6.1)
