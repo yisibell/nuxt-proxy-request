@@ -79,7 +79,36 @@ That's it! You can now use **nuxt-proxy-request** in your Nuxt app ✨
 
 1. Do not use `runtimeConfig.proxy` for configuration, as the function type value in the `runtimeConfig` object will be ignored. Please use `proxy` for configuration as it has undergone special processing on the internal implementation.
 
-2. Do not use any imports, in function body.
+2. Do not use any external variables within the function body.
+
+```ts
+import foo from 'foo'
+
+export default defineNuxtConfig({
+  modules: [
+    'nuxt-proxy-request'
+  ],
+  proxy: {
+    options: [
+      {
+        target: 'http://www.example.com',
+        pathFilter: function(path, req) {
+          console.log(foo) /* At runtime, foo is undefined. */
+
+          return path.match(/^\/api/) && req.method === 'GET';
+        },
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    ]
+  }
+  // OR
+  // runtimeConfig: {
+  //   proxy: {...}
+  // }
+})
+```
 
 3. Do not use **RegExp** literal, using `new RegExp()` instead, in function body.
 
