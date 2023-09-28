@@ -18,7 +18,7 @@ A http proxy module for nuxt(3) powered by <a href="https://github.com/yisibell/
 
 ## Why use this module?
 
-- See this issue [Error when starting a Project using "http-proxy-middleware" with "npm run start" #15608](https://github.com/nuxt/nuxt/issues/15608)
+- See this issue [Error when starting a Project using "http-proxy-middleware" with "npm run start" #15608](https://github.com/nuxt/nuxt/issues/15608).
 
 ## Features
 
@@ -68,18 +68,22 @@ export default defineNuxtConfig({
 
 That's it! You can now use **nuxt-proxy-request** in your Nuxt app ✨
 
-
-## Notes :warning:
-
-1. Do not use `runtimeConfig.proxy` for configuration when the value of a certain configuration item is a function type, as the function type value in the `runtimeConfig` object will be ignored. Please use `proxy` for configuration as it has undergone special processing on the internal implementation.
-2. Do not use any imports, in **nuxt-proxy-request**, the function type option is only copied from the source code of **h3-proxy**.
-3. Do not use **RegExp** literal, using `new RegExp()` instead.
-
 ## Options
 
 | Key | Type | Default value | Description |
 | :---: | :---: | :---: | :---: |
 | `options` | `object/Array<object>` | `[]` | Configure which targets you want to proxy. :warning: TIPS: More **config object** please see [h3-proxy's Options](https://github.com/yisibell/h3-proxy#options), You can pass an **array of options** for multiple targets or pass an **object of options** for single target.|
+
+
+### :warning: Do not when the value of a certain configuration item is a function type
+
+1. Do not use `runtimeConfig.proxy` for configuration, as the function type value in the `runtimeConfig` object will be ignored. Please use `proxy` for configuration as it has undergone special processing on the internal implementation.
+
+2. Do not use any imports, in **nuxt-proxy-request**, the function type option is only copied from the source code of **h3-proxy**.
+
+3. Do not use **RegExp** literal, using `new RegExp()` instead.
+
+4. Do not use **Single-Line Comments**, using **Multiple-Line Comments** instead.
 
 ## Development
 
