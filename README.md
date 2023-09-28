@@ -83,7 +83,7 @@ That's it! You can now use **nuxt-proxy-request** in your Nuxt app ✨
 
 3. Do not use **RegExp** literal, using `new RegExp()` instead, in function body.
 
-4. Do not use **Single-Line Comments**, using **Multiple-Line Comments** instead, in function body,
+4. Do not use **Single-Line Comments**, using **Multiple-Line Comments** instead, in function body.
 
 > If the above points cause you trouble. You can use `h3-proxy` directly. See [how to use h3-proxy in Nuxt3 Project](https://github.com/yisibell/h3-proxy#nuxt).
 
