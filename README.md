@@ -103,10 +103,6 @@ export default defineNuxtConfig({
       }
     ]
   }
-  // OR
-  // runtimeConfig: {
-  //   proxy: {...}
-  // }
 })
 ```
 
