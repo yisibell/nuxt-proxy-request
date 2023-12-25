@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v1.8.0
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.7.0...v1.8.0)
+
+### 🚀 Enhancements
+
+- Upgrade h3-proxy to v1.11 ([baec6b7](https://github.com/yisibell/nuxt-proxy-request/commit/baec6b7))
+
+### 🏡 Chore
+
+- **docs:** Update readme ([cb1c30b](https://github.com/yisibell/nuxt-proxy-request/commit/cb1c30b))
+- Update readme ([54b71ef](https://github.com/yisibell/nuxt-proxy-request/commit/54b71ef))
+- Update readme ([aa47975](https://github.com/yisibell/nuxt-proxy-request/commit/aa47975))
+- Update readme ([623aaae](https://github.com/yisibell/nuxt-proxy-request/commit/623aaae))
+- Update readme ([7c7b78d](https://github.com/yisibell/nuxt-proxy-request/commit/7c7b78d))
+- Update readme ([ce2a769](https://github.com/yisibell/nuxt-proxy-request/commit/ce2a769))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.7.0
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.6.1...v1.7.0)
