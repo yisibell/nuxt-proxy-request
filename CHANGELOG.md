@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.9.0
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.8.0...v1.9.0)
+
+### 🚀 Enhancements
+
+- Upgrade all deps to latest version ([d4076c0](https://github.com/yisibell/nuxt-proxy-request/commit/d4076c0))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.8.0
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.7.0...v1.8.0)
