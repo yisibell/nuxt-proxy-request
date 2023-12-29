@@ -54,7 +54,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.options.build.transpile.push(
       runtimeDir,
-      new RegExp(`${virtualModulePrefix}`)
+      new RegExp(`${virtualModulePrefix}`),
     )
 
     const finalConfig = defu(nuxt.options.runtimeConfig.proxy, inlineOptions)
@@ -64,11 +64,11 @@ export default defineNuxtModule<ModuleOptions>({
     // Create a virtual module
     function createProxyServerHandlerVirtualModule(
       opts: CreateProxyEventHandlerOptions,
-      index?: number
+      index?: number,
     ) {
       return `
         import { createProxyMiddleware } from ${JSON.stringify(
-          resolve(runtimeDir, './middleware.mjs')
+          resolve(runtimeDir, './middleware.mjs'),
         )}
         import { defu } from 'defu'
         import { useRuntimeConfig } from '#imports'
@@ -76,7 +76,7 @@ export default defineNuxtModule<ModuleOptions>({
         const buildtimeOptions = ${stringifyOptions(opts)}
 
         const runtimeOptions = [].concat(useRuntimeConfig().proxy?.options)[${JSON.stringify(
-          index
+          index,
         )} ?? 0]
     
         export default createProxyMiddleware(defu(runtimeOptions, buildtimeOptions))
@@ -96,7 +96,7 @@ export default defineNuxtModule<ModuleOptions>({
 
         nitroConfig.virtual![handler] = createProxyServerHandlerVirtualModule(
           opts,
-          index
+          index,
         )
 
         addServerHandler({
