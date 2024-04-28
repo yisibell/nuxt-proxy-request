@@ -18,16 +18,23 @@
         <button @click="handleLogin">Login test</button>
       </div>
     </div>
+
+    <div>
+      <h3>Results:</h3>
+      <p>{{ results }}</p>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { reactive } from '#imports'
+import { reactive, ref } from '#imports'
 
 const form = reactive({
   username: '',
   password: '',
 })
+
+const results = ref()
 
 const handleLogin = async () => {
   const res = await $fetch('/user/login', {
@@ -37,6 +44,8 @@ const handleLogin = async () => {
   })
 
   console.log(res)
+
+  results.value = res
 }
 </script>
 
