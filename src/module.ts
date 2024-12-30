@@ -18,9 +18,9 @@ declare module 'nuxt/schema' {
   }
 }
 
-export const virtualModulePrefix = '#nuxt-proxy-request'
+const virtualModulePrefix = '#nuxt-proxy-request'
 
-export const stringifyOptions = (value: any) => {
+const stringifyOptions = (value: any) => {
   const res = JSON.stringify(value, (key, value) => {
     if (typeof value === 'function') {
       return `<Function>${value}</Function>`
