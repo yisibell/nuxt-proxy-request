@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.4
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.0.3...v2.0.4)
+
+### 🩹 Fixes
+
+- H3 deps ([278ee66](https://github.com/yisibell/nuxt-proxy-request/commit/278ee66))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.0.3
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.0.2...v2.0.3)
