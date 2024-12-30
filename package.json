@@ -10,9 +10,9 @@
   "types": "./dist/types.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/types.d.ts",
       "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs",
-      "types": "./dist/types.d.ts"
+      "require": "./dist/module.cjs"
     }
   },
   "files": [
@@ -32,10 +32,10 @@
   ],
   "homepage": "https://github.com/yisibell/nuxt-proxy-request",
   "scripts": {
-    "prepack": "nuxt-module-build",
+    "prepack": "nuxt-module-build build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "release:lint:test": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
