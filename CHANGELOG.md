@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.1
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.0.0...v2.0.1)
+
+### 🩹 Fixes
+
+- Exports ([e8e9964](https://github.com/yisibell/nuxt-proxy-request/commit/e8e9964))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.0.0
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v1.10.0...v2.0.0)
