@@ -2,7 +2,7 @@ import { fileURLToPath } from 'node:url'
 import { defu } from 'defu'
 import { addServerHandler, createResolver, defineNuxtModule } from '@nuxt/kit'
 import type { CreateProxyEventHandlerOptions } from 'h3-proxy'
-import { hash, objectHash } from 'ohash'
+// import { hash, objectHash } from 'ohash'
 
 export type ProxyOptions =
   | CreateProxyEventHandlerOptions[]
@@ -92,7 +92,8 @@ export default defineNuxtModule<ModuleOptions>({
         : [finalConfig.options]
 
       finalConfigOptions.forEach((opts, index) => {
-        const handler = `${virtualModulePrefix}/${hash(objectHash(opts))}.mjs`
+        // const handler = `${virtualModulePrefix}/${hash(objectHash(opts))}.mjs`
+        const handler = `${virtualModulePrefix}/${index}.mjs`
 
         nitroConfig.virtual![handler] = createProxyServerHandlerVirtualModule(
           opts,
