@@ -16,8 +16,7 @@
     }
   },
   "files": [
-    "dist",
-    "*.d.ts"
+    "dist"
   ],
   "keywords": [
     "nuxt",
