@@ -1,10 +1,13 @@
 {
   "name": "nuxt-proxy-request",
-  "version": "2.0.5",
+  "version": "2.0.4",
   "description": "A http proxy module for nuxt(3) powered by h3-proxy.",
   "repository": "yisibell/nuxt-proxy-request",
   "license": "MIT",
   "type": "module",
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.mjs",
+  "types": "./dist/types.d.ts",
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
@@ -12,8 +15,6 @@
       "require": "./dist/module.cjs"
     }
   },
-  "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
   "files": [
     "dist"
   ],
