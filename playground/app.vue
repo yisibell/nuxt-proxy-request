@@ -5,17 +5,25 @@
     <div class="form">
       <div class="form-item">
         <span class="form-item__label">User name:</span>
-        <input v-model="form.username" type="text" />
+        <input
+          v-model="form.username"
+          type="text"
+        >
       </div>
 
       <div class="form-item">
         <span class="form-item__label">Password:</span>
-        <input v-model="form.password" type="password" />
+        <input
+          v-model="form.password"
+          type="password"
+        >
       </div>
 
       <div class="form-item">
-        <span class="form-item__label"></span>
-        <button @click="handleLogin">Login test</button>
+        <span class="form-item__label" />
+        <button @click="handleLogin">
+          Login test
+        </button>
       </div>
     </div>
 

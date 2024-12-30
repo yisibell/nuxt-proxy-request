@@ -72,13 +72,13 @@ export default defineNuxtModule<ModuleOptions>({
         )}
         import { defu } from 'defu'
         import { useRuntimeConfig } from '#imports'
-    
+
         const buildtimeOptions = ${stringifyOptions(opts)}
 
         const runtimeOptions = [].concat(useRuntimeConfig().proxy?.options)[${JSON.stringify(
           index,
         )} ?? 0]
-    
+
         export default createProxyMiddleware(defu(runtimeOptions, buildtimeOptions))
       `
     }

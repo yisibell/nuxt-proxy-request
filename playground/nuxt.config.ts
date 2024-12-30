@@ -1,6 +1,8 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
 
+  compatibilityDate: '2024-12-30',
+
   // test function value
   // proxy: {
   //   options: [
@@ -23,16 +25,6 @@ export default defineNuxtConfig({
   //   ],
   // },
 
-  proxy: {
-    options: [
-      {
-        target: 'http://16.163.143.182',
-        pathRewrite: { '^/api2': '' },
-        pathFilter: ['/api2/**'],
-      },
-    ],
-  },
-
   // or use runtimeConfig
   // runtimeConfig: {
   //   proxy: {
@@ -45,7 +37,6 @@ export default defineNuxtConfig({
   //     ],
   //   },
   // },
-
   // runtimeConfig: {
   //   proxy: {
   //     options: [
@@ -60,4 +51,13 @@ export default defineNuxtConfig({
   //     ],
   //   },
   // },
+  proxy: {
+    options: [
+      {
+        target: 'http://18.163.184.231',
+        pathRewrite: { '^/api2': '' },
+        pathFilter: ['/api2/**'],
+      },
+    ],
+  },
 })
