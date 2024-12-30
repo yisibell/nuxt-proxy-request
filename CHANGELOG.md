@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.7
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.0.6...v2.0.7)
+
+### 🩹 Fixes
+
+- Runtime ([b2be769](https://github.com/yisibell/nuxt-proxy-request/commit/b2be769))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.0.6
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.0.5...v2.0.6)
