@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v2.0.6
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.0.5...v2.0.6)
+
+### 🩹 Fixes
+
+- Exports ([539b32a](https://github.com/yisibell/nuxt-proxy-request/commit/539b32a))
+- Virtual handler ([5c0c351](https://github.com/yisibell/nuxt-proxy-request/commit/5c0c351))
+
+### 🏡 Chore
+
+- **release:** V2.0.5 ([1953e2f](https://github.com/yisibell/nuxt-proxy-request/commit/1953e2f))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.0.5
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.0.5...v2.0.5)
