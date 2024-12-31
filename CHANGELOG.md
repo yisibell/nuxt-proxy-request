@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.1.0
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.0.7...v2.1.0)
+
+### 🚀 Enhancements
+
+- Remove ohash deps ([354134c](https://github.com/yisibell/nuxt-proxy-request/commit/354134c))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.0.7
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.0.6...v2.0.7)
