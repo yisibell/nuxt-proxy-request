@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v3.0.0
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.1.0...v3.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Support for nuxt4 ([404e274](https://github.com/yisibell/nuxt-proxy-request/commit/404e274))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Support for nuxt4 ([404e274](https://github.com/yisibell/nuxt-proxy-request/commit/404e274))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.1.0
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.0.7...v2.1.0)
