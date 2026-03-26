@@ -84,9 +84,9 @@ export default defineNuxtModule<ModuleOptions>({
       ? finalConfig.options
       : [finalConfig.options]
 
-    finalConfigOptions.forEach((_, index) => {
-      const handler = `${virtualModulePrefix}/${index}.mjs`
+    const serverHandlerOptions = finalConfigOptions.map((opts, index) => ({ opts, handler: `${virtualModulePrefix}/${index}.mjs` }))
 
+    serverHandlerOptions.forEach(({ handler }) => {
       addServerHandler({
         handler,
         middleware: true,
@@ -96,8 +96,8 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.hook('nitro:config', (nitroConfig) => {
       nitroConfig.virtual = nitroConfig.virtual || {}
 
-      finalConfigOptions.forEach((opts, index) => {
-        const handler = `${virtualModulePrefix}/${index}.mjs`
+      serverHandlerOptions.forEach((v, index) => {
+        const { opts, handler } = v
 
         nitroConfig.virtual![handler] = createProxyServerHandlerVirtualModule(
           opts,
