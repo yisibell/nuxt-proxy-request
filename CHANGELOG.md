@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v4.0.2
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v4.0.1...v4.0.2)
+
+### 🏡 Chore
+
+- Optimize server handler parameters ([30256ab](https://github.com/yisibell/nuxt-proxy-request/commit/30256ab))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v4.0.1
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v4.0.0...v4.0.1)
