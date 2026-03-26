@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v4.0.0
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v3.0.0...v4.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Support for nuxt v4.2+ ([f790a2f](https://github.com/yisibell/nuxt-proxy-request/commit/f790a2f))
+
+### 🩹 Fixes
+
+- **module:** Register proxy handlers before nitro:config ([313f6a6](https://github.com/yisibell/nuxt-proxy-request/commit/313f6a6))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Support for nuxt v4.2+ ([f790a2f](https://github.com/yisibell/nuxt-proxy-request/commit/f790a2f))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+- Zc16607 <zc16607@gmail.com>
+
 ## v3.0.0
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v2.1.0...v3.0.0)
