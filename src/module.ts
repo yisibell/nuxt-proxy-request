@@ -82,13 +82,21 @@ export default defineNuxtModule<ModuleOptions>({
       `
     }
 
+    const finalConfigOptions = Array.isArray(finalConfig.options)
+      ? finalConfig.options
+      : [finalConfig.options]
+
+    finalConfigOptions.forEach((_, index) => {
+      const handler = `${virtualModulePrefix}/${index}.mjs`
+
+      addServerHandler({
+        handler,
+        middleware: true,
+      })
+    })
+
     nuxt.hook('nitro:config', (nitroConfig) => {
       nitroConfig.virtual = nitroConfig.virtual || {}
-
-      // To array
-      const finalConfigOptions = Array.isArray(finalConfig.options)
-        ? finalConfig.options
-        : [finalConfig.options]
 
       finalConfigOptions.forEach((opts, index) => {
         const handler = `${virtualModulePrefix}/${index}.mjs`
@@ -97,11 +105,6 @@ export default defineNuxtModule<ModuleOptions>({
           opts,
           index,
         )
-
-        addServerHandler({
-          handler,
-          middleware: true,
-        })
       })
     })
   },
