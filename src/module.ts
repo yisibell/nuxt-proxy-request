@@ -3,9 +3,7 @@ import { defu } from 'defu'
 import { addServerHandler, createResolver, defineNuxtModule } from '@nuxt/kit'
 import type { CreateProxyEventHandlerOptions } from 'h3-proxy'
 
-export type ProxyOptions =
-  | CreateProxyEventHandlerOptions[]
-  | CreateProxyEventHandlerOptions
+export type ProxyOptions = CreateProxyEventHandlerOptions[] | CreateProxyEventHandlerOptions
 
 export interface ModuleOptions {
   options: ProxyOptions
