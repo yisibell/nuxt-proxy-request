@@ -1,5 +1,11 @@
+/* eslint-disable prefer-regex-literals */
+
 export default defineNuxtConfig({
   modules: ['../src/module'],
+
+  devtools: {
+    enabled: false,
+  },
 
   compatibilityDate: '2024-12-30',
 
@@ -47,7 +53,7 @@ export default defineNuxtConfig({
         pathRewrite: {
           '^/api/echo': '/anything',
         },
-        configureProxyRequest: function (event) {
+        configureProxyRequest: function (_event) {
           return {
             headers: {
               'X-Proxy-Auth': 'nuxt-proxy-demo-token',
@@ -74,7 +80,7 @@ export default defineNuxtConfig({
         pathRewrite: {
           '^/api/filter': '/anything',
         },
-        configureProxyRequest: function (event) {
+        configureProxyRequest: function (_event) {
           return {
             headers: {
               'X-Filter-Type': 'function-based-pathFilter-method-GET-only',

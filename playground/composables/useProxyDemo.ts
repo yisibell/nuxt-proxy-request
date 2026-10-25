@@ -69,7 +69,9 @@ function createState() {
     loading.users = true
     results.users = null
     results.usersError = null
-    try { results.users = await $fetch('/api/users') }
+    try {
+      results.users = await $fetch('/api/users')
+    }
     catch (e: any) { results.usersError = e.message || 'Failed to fetch users' }
     finally { loading.users = false }
   }
@@ -78,7 +80,9 @@ function createState() {
     loading.singleUser = true
     results.users = null
     results.usersError = null
-    try { results.users = await $fetch('/api/users/1') }
+    try {
+      results.users = await $fetch('/api/users/1')
+    }
     catch (e: any) { results.usersError = e.message || 'Failed to fetch user' }
     finally { loading.singleUser = false }
   }
@@ -113,7 +117,9 @@ function createState() {
     loading.singlePost = true
     results.posts = null
     results.postsError = null
-    try { results.posts = await $fetch('/api/posts/1') }
+    try {
+      results.posts = await $fetch('/api/posts/1')
+    }
     catch (e: any) { results.postsError = e.message || 'Failed to fetch post' }
     finally { loading.singlePost = false }
   }
@@ -122,7 +128,9 @@ function createState() {
     loading.postComments = true
     results.posts = null
     results.postsError = null
-    try { results.posts = await $fetch('/api/posts/1/comments') }
+    try {
+      results.posts = await $fetch('/api/posts/1/comments')
+    }
     catch (e: any) { results.postsError = e.message || 'Failed to fetch comments' }
     finally { loading.postComments = false }
   }
@@ -132,7 +140,9 @@ function createState() {
     loading.echoGet = true
     results.echo = null
     results.echoError = null
-    try { results.echo = await $fetch('/api/echo') }
+    try {
+      results.echo = await $fetch('/api/echo')
+    }
     catch (e: any) { results.echoError = e.message || 'Echo request failed' }
     finally { loading.echoGet = false }
   }
@@ -156,7 +166,9 @@ function createState() {
     loading.publicGet = true
     results.public = null
     results.publicError = null
-    try { results.public = await $fetch('/api/filter/test') }
+    try {
+      results.public = await $fetch('/api/filter/test')
+    }
     catch (e: any) { results.publicError = e.message || 'Request failed' }
     finally { loading.publicGet = false }
   }

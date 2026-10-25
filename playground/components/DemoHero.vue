@@ -9,7 +9,11 @@
     </h1>
     <p class="hero__subtitle">
       HTTP Proxy for Nuxt — powered by
-      <a href="https://github.com/yisibell/h3-proxy" target="_blank" class="link">h3-proxy</a>
+      <a
+        href="https://github.com/yisibell/h3-proxy"
+        target="_blank"
+        class="link"
+      >h3-proxy</a>
     </p>
     <p class="hero__desc">
       Seamlessly proxy API requests in both
@@ -17,10 +21,18 @@
       No more <code>http-proxy-middleware</code> compatibility issues.
     </p>
     <div class="hero__links">
-      <a href="https://www.npmjs.com/package/nuxt-proxy-request" target="_blank" class="btn btn--outline">
+      <a
+        href="https://www.npmjs.com/package/nuxt-proxy-request"
+        target="_blank"
+        class="btn btn--outline"
+      >
         📦 npm
       </a>
-      <a href="https://github.com/yisibell/nuxt-proxy-request" target="_blank" class="btn btn--outline">
+      <a
+        href="https://github.com/yisibell/nuxt-proxy-request"
+        target="_blank"
+        class="btn btn--outline"
+      >
         ⭐ GitHub
       </a>
     </div>
