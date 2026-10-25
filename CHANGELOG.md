@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v5.0.0
+
+[compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v4.0.2...v5.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Supports nuxt 4.4 ([201bea3](https://github.com/yisibell/nuxt-proxy-request/commit/201bea3))
+
+### 🤖 CI
+
+- Update demo and supports deploy to vercel ([ea9b661](https://github.com/yisibell/nuxt-proxy-request/commit/ea9b661))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Supports nuxt 4.4 ([201bea3](https://github.com/yisibell/nuxt-proxy-request/commit/201bea3))
+
+### ❤️ Contributors
+
+- Elenh <yisiwings@163.com>
+
 ## v4.0.2
 
 [compare changes](https://github.com/yisibell/nuxt-proxy-request/compare/v4.0.1...v4.0.2)
