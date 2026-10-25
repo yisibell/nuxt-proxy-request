@@ -39,7 +39,7 @@ export default defineNuxtModule<ModuleOptions>({
     name: 'nuxt-proxy-request',
     configKey: 'proxy',
     compatibility: {
-      nuxt: '>=3.1.0',
+      nuxt: '>=3.16.0 <4.5.0',
     },
   },
   defaults: {

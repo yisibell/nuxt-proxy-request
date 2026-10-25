@@ -1,5 +1,8 @@
 <template>
-  <section class="panel" :class="{ 'panel--highlight': highlight }">
+  <section
+    class="panel"
+    :class="{ 'panel--highlight': highlight }"
+  >
     <div class="panel__header">
       <div>
         <h2 class="panel__title">
@@ -11,9 +14,15 @@
           >{{ m }}</span>
           {{ title }}
         </h2>
-        <p class="panel__hint" v-html="hint" />
+        <p
+          class="panel__hint"
+          v-html="hint"
+        />
       </div>
-      <div v-if="$slots.actions" class="panel__actions">
+      <div
+        v-if="$slots.actions"
+        class="panel__actions"
+      >
         <slot name="actions" />
       </div>
     </div>
@@ -44,7 +53,9 @@ defineProps<{
 
 .panel--highlight {
   border-color: #c7d2fe;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08), var(--shadow);
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.08),
+    var(--shadow);
 }
 
 .panel__header {

@@ -1,6 +1,6 @@
 {
   "name": "nuxt-proxy-request",
-  "version": "4.0.2",
+  "version": "5.0.0",
   "description": "A http proxy module for nuxt(3) powered by h3-proxy.",
   "repository": "yisibell/nuxt-proxy-request",
   "license": "MIT",
@@ -47,21 +47,22 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@nuxt/kit": "^4.0.1",
+    "@nuxt/kit": "^3.16.0 || >=4.0.0 <4.5.0",
     "defu": "^6.1.4",
     "h3-proxy": "^1.13.0"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^1.16.0",
     "@nuxt/module-builder": "^1.0.3",
-    "@nuxt/schema": "^4.0.1",
+    "@nuxt/schema": "~4.4.8",
     "@nuxt/test-utils": "^3.19.2",
     "changelogen": "^0.6.2",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^9.31.0",
+    "eslint": "^9.39.4",
     "eslint-plugin-format": "^2.0.1",
-    "nuxt": "^4.0.1",
+    "nuxt": "~4.4.8",
     "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   }
 }

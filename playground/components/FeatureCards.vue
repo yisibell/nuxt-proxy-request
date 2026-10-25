@@ -1,6 +1,10 @@
 <template>
   <section class="features">
-    <div v-for="card in cards" :key="card.title" class="feature-card">
+    <div
+      v-for="card in cards"
+      :key="card.title"
+      class="feature-card"
+    >
       <div class="feature-card__icon">
         {{ card.icon }}
       </div>
@@ -50,7 +54,9 @@ const cards = [
   padding: 24px;
   text-align: center;
   box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .feature-card:hover {

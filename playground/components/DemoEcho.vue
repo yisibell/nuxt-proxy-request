@@ -8,23 +8,40 @@
           <code>X-Proxy-Auth</code>, <code>X-Request-Source</code>, <code>X-Proxy-Version</code>"
   >
     <template #actions>
-      <button class="btn btn--primary" :disabled="loading.echoGet" @click="echoGet">
+      <button
+        class="btn btn--primary"
+        :disabled="loading.echoGet"
+        @click="echoGet"
+      >
         {{ loading.echoGet ? 'Loading...' : 'GET /api/echo' }}
       </button>
-      <button class="btn btn--post" :disabled="loading.echoPost" @click="echoPost">
+      <button
+        class="btn btn--post"
+        :disabled="loading.echoPost"
+        @click="echoPost"
+      >
         {{ loading.echoPost ? 'Sending...' : 'POST /api/echo' }}
       </button>
     </template>
 
-    <div v-if="results.echoError" class="result result--error">
+    <div
+      v-if="results.echoError"
+      class="result result--error"
+    >
       <span class="result__icon">❌</span> {{ results.echoError }}
     </div>
-    <div v-else-if="results.echo" class="result">
+    <div
+      v-else-if="results.echo"
+      class="result"
+    >
       <div class="result__meta">
         <span class="badge badge--success">Proxied Successfully</span>
         <span class="badge badge--info">Headers injected by configureProxyRequest</span>
       </div>
-      <div v-if="results.echo.headers" class="echo-headers">
+      <div
+        v-if="results.echo.headers"
+        class="echo-headers"
+      >
         <h4>🔍 Custom Headers Received by httpbin:</h4>
         <div class="header-tags">
           <span
@@ -41,7 +58,10 @@
         <pre class="result__json">{{ formatJson(results.echo) }}</pre>
       </details>
     </div>
-    <div v-else class="result result--empty">
+    <div
+      v-else
+      class="result result--empty"
+    >
       <span class="result__icon">👆</span> Click a button above to test header injection via configureProxyRequest
     </div>
   </ProxyPanel>
